@@ -38,15 +38,19 @@ scn.addFit('Who discovered Brazil?', 'Brazil was discovered by Portuguese naviga
 scn.addFit('What is the main language spoken in Spain?', 'The main language spoken in Spain is Spanish.')
 scn.train() # use the "train" method to train the model with the assigned dataset
 # with the "print_predict" method you can display the output for a given input
+scn.print_predict('Hello! Who are you?')
+scn.print_predict('Who discovered Brazil?')
 scn.print_predict('What is the main language spoken in Spain?')
 
 ```
 Prediction response:
 ```bash
-Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 8128.50it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 286/286 [00:00<00:00, 3932.85it/s]
-Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 80.98it/s]
-Training model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 93.90it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 15650.39it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 286/286 [00:00<00:00, 5248.18it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 108.32it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 125.72it/s]
+Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
+Brazil was discovered by Portuguese navigators led by Pedro Alvares Cabral in 1500.
 The main language spoken in Spain is Spanish.
 ```
 ```python
@@ -59,12 +63,12 @@ scn.addFit('What is the main language spoken in Spain?', 'The main language spok
 scn.train(progress=False) # set "False" to the "progress" parameter if you want to hide the training progress
 # assign in the first argument the input for which you want to obtain an output
 # the training input output that is most semantically similar to the prediction input, will be returned
-scn.print_predict('What is the main language spoken in Spain?') # if the answer is wrong, add more data to your training
+scn.print_predict('Hello! Who are you?') # if the answer is wrong, add more data to your training
 
 ```
 Prediction response:
 ```bash
-The main language spoken in Spain is Spanish.
+Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 ```
 
 You can also use the "string" training parameter to add input and output pairs to your dataset.
@@ -90,15 +94,17 @@ The capital of Spain is Madrid.
 scn.train(string=dataset) # uses the value of the "dataset" variable as the training database
 # call the prediction method as many times as you want
 scn.print_predict('What does the acronym GPT mean in language models?')
+scn.print_predict('Tell me what is the meaning of GPT in language models.')
 scn.print_predict('What is the capital of Spain?')
 scn.print_predict('Tell me the name of the capital of Spain.')
 
 ```
 ```bash
-Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 8405.42it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 384/384 [00:00<00:00, 7112.85it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 108.95it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 126.53it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10645.44it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 384/384 [00:00<00:00, 7094.96it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.62it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 124.87it/s]
+GPT in language models stands for Generative Pre-trained Transformer.
 GPT in language models stands for Generative Pre-trained Transformer.
 The capital of Spain is Madrid.
 The capital of Spain is Madrid.
@@ -122,15 +128,17 @@ scn.addFit('Tell me the name of the capital of Spain.', 'The capital of Spain is
 scn.train(string=dataset)
 
 scn.print_predict('What does the acronym GPT mean in language models?')
+scn.print_predict('Tell me what is the meaning of GPT in language models.')
 scn.print_predict('What is the capital of Spain?')
 scn.print_predict('Tell me the name of the capital of Spain.')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11335.96it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 384/384 [00:00<00:00, 6988.41it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 106.86it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 124.09it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12157.40it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 384/384 [00:00<00:00, 6937.66it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 106.38it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 123.44it/s]
+GPT in language models stands for Generative Pre-trained Transformer.
 GPT in language models stands for Generative Pre-trained Transformer.
 The capital of Spain is Madrid.
 The capital of Spain is Madrid.
@@ -177,15 +185,27 @@ from scn import SCN
 scn = SCN()
 # use the "dataset_path" parameter to assign the path of a "json", "csv" or "txt" file as the training database
 scn.train(dataset_path='dataset.json')
+scn.print_predict('Hello! Who are you?')
+scn.print_predict('Who discovered Brazil?')
 scn.print_predict('What is the main language spoken in Spain?')
+scn.print_predict('What is the capital of Portugal?')
+scn.print_predict('How much is 2 + 2?')
+scn.print_predict('What is five minus three?')
+scn.print_predict('What is your name?')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10305.42it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18229842.79it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.55it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 124.77it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10433.59it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18577362.42it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.89it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 125.18it/s]
+Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
+Brazil was discovered by Portuguese navigators led by Pedro Alvares Cabral in 1500.
 The main language spoken in Spain is Spanish.
+The capital of Portugal is Lisbon.
+The sum of 2 + 2 in mathematics is 4.
+The result of five minus three is two.
+My name is Sapiens Chat.
 ```
 You can also supplement the training data with the "addFit" method.
 ```python
@@ -196,14 +216,16 @@ scn.addFit('What is the capital of Spain?', 'The capital of Spain is Madrid.')
 scn.addFit('Tell me the name of the capital of Spain.', 'The capital of Spain is Madrid.')
 scn.train(dataset_path='dataset.json')
 scn.print_predict('What is the capital of Spain?')
+scn.print_predict('Tell me the name of the capital of Spain.')
 scn.print_predict('What is the main language spoken in Spain?')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12018.06it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 136/136 [00:00<00:00, 2480.27it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.42it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 124.71it/s]
+Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 7752.87it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 136/136 [00:00<00:00, 2531.44it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 109.73it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 127.29it/s]
+The capital of Spain is Madrid.
 The capital of Spain is Madrid.
 The main language spoken in Spain is Spanish.
 ```
@@ -225,12 +247,48 @@ scn.print_predict('What is the main language spoken in Spain?')
 
 ```
 ```bash
-Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 9098.27it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 246/246 [00:00<00:00, 4523.67it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 108.17it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 125.56it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12787.51it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 246/246 [00:00<00:00, 4561.99it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.82it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 125.10it/s]
 GPT in language models stands for Generative Pre-trained Transformer.
 The main language spoken in Spain is Spanish.
+```
+Since SCN is a pattern recognition network, you can type the same question in different ways and the pattern will still be recognized.
+```python
+from scn import SCN
+scn = SCN()
+# you can also supplement the file data with the data from the "string" parameter
+string = '''
+What does the acronym GPT mean in language models?
+GPT in language models stands for Generative Pre-trained Transformer.
+
+Tell me what is the meaning of GPT in language models.
+GPT in language models stands for Generative Pre-trained Transformer.
+'''
+scn.train(dataset_path='dataset.json', string=string)
+# note that it is not necessary for the prompt to be exactly the same as one of the training inputs, it just needs to have the same semantic meaning
+prompt = 'i would like to know the meaning of the acronym gpt in language models'
+print('Prompt:', prompt)
+print('Answer: ', end='')
+scn.print_predict(prompt)
+print()
+print('Prompt:', prompt)
+prompt = 'please could you tell me the name of the main language spoken in spain?'
+print('Answer:', end='')
+scn.print_predict(prompt)
+
+```
+```bash
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12985.46it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 246/246 [00:00<00:00, 4495.52it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.47it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 124.69it/s]
+Prompt: i would like to know the meaning of the acronym gpt in language models
+Answer: GPT in language models stands for Generative Pre-trained Transformer.
+
+Prompt: i would like to know the meaning of the acronym gpt in language models
+Answer:The main language spoken in Spain is Spanish.
 ```
 You can combine different ways of inserting data when assembling your dataset. Below we are combining data coming from a file, with data from variables.
 ```python
@@ -256,10 +314,10 @@ scn.print_predict('What is the closest star?')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12336.19it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 440/440 [00:00<00:00, 8104.15it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.39it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 124.74it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12826.62it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 440/440 [00:00<00:00, 7831.14it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 104.83it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 121.60it/s]
 The main language spoken in Spain is Spanish.
 The capital of Spain is Madrid.
 The closest star is the Sun.
@@ -311,9 +369,9 @@ scn.print_predict('What is Artificial Intelligence (AI)?')
 ```
 ```bash
 Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 9709.04it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 16160281.11it/s]
-Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 95.56it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 108.54it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 16241128.82it/s]
+Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 95.77it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 111.21it/s]
 Artificial Intelligence is a field of computer science that develops systems capable of performing tasks that would normally require human intelligence, such as learning, reasoning, perception, and decision-making.
 ```
 Remember that it is possible to complement the file data with the "string" parameter and/or the "addFit" method.
@@ -340,10 +398,10 @@ scn.print_predict('What is the closest star?')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 13530.01it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 440/440 [00:00<00:00, 7319.06it/s]
-Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 97.87it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 113.70it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11748.75it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 440/440 [00:00<00:00, 7014.42it/s]
+Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 94.00it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 109.11it/s]
 Artificial Intelligence is a field of computer science that develops systems capable of performing tasks that would normally require human intelligence, such as learning, reasoning, perception, and decision-making.
 The capital of Spain is Madrid.
 The closest star is the Sun.
@@ -410,10 +468,10 @@ scn.print_predict('What is the main language spoken in Spain?', stream=True, int
 
 ```
 ```bash
-Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 9341.43it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18419174.93it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 108.34it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 125.75it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12826.62it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17843470.42it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 105.09it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 121.99it/s]
 The main language spoken in Spain is Spanish.
 ```
 Now see an example complementing the file data with the "string" parameter and with the "addFit" method.
@@ -458,10 +516,10 @@ scn.print_predict('Hello! Who are you?', stream=True, interval=0.01)
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10205.12it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 12181872.57it/s]
-Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 72.21it/s]
-Training model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 83.98it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11881.88it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 12289380.15it/s]
+Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 72.78it/s]
+Training model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 84.59it/s]
 Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 ```
 The "precision" parameter sets a specific percentage of the total length of the largest tokenized embedding and applies this same length to all embeddings.
@@ -476,10 +534,10 @@ scn.print_predict('What is five minus three?', stream=True, interval=0.01)
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12520.31it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18106446.45it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 106.68it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 123.90it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12018.06it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18491121.03it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 108.77it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 126.19it/s]
 The result of five minus three is two.
 ```
 With the "context_window" parameter of the training method, you can set an integer to limit the size of your model's context window. The size defined in this parameter will be applied to the length of all embeddings. By default, the context window size is infinite, which means that all embeddings will always use their maximum length.
@@ -497,10 +555,10 @@ scn.print_predict('What is the main language spoken in Spain?', stream=True, int
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 13357.66it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18303269.39it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.80it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 125.17it/s]
+Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 7752.87it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18335514.73it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.75it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 125.11it/s]
 The main language spoken in Spain is Spanish.
 ```
 With the "end_tag" parameter of the "train" method, you can define a substring contained in the text of your file or training string to be used as a separator of the input and output pairs. In this case, the algorithm will divide your text into smaller parts, separated by the value of "end_tag" and consider that each of these parts contains a specific output and/or input.
@@ -552,10 +610,10 @@ scn.print_predict('Explain artificial neural networks to me.', stream=True, inte
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12336.19it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 16197038.10it/s]
-Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 95.44it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 110.89it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11748.75it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 16049284.65it/s]
+Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 94.67it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 109.93it/s]
 They are models inspired by the functioning of the human brain, composed of layers of artificial neurons that process information and adjust their weights to me patterns and make decisions.
 ```
 If you are using the "string" parameter together with a text file, both must have the same value of "end_tag" in their content.
@@ -589,9 +647,9 @@ scn.print_predict('Tell me the main types of machine learning.', stream=True, in
 ```
 ```bash
 Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12710.01it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 589/589 [00:00<00:00, 9653.23it/s]
-Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 96.64it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 112.27it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 589/589 [00:00<00:00, 9854.78it/s]
+Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 98.55it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 114.44it/s]
 Prompt: Explain artificial neural networks to me.
 Answer: They are models inspired by the functioning of the human brain, composed of layers of artificial neurons that process information and adjust their weights to me patterns and make decisions.
 
@@ -619,11 +677,11 @@ print(training_metrics) # displays training metrics
 
 ```
 ```bash
-Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 8701.88it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 16427893.28it/s]
-Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 96.82it/s]
-Validating model: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 426/426 [00:00<00:00, 152078.77it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 107.23it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12985.46it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 16196475.19it/s]
+Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 95.55it/s]
+Validating model: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 426/426 [00:00<00:00, 165426.67it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 106.27it/s]
 {'val_loss': 0.2197099781488428, 'loss': 0.08435451958561202, 'generalization_rate': 0.7802900218511573, 'precision': 0.915645480414388}
 ```
 Below is an example with all the training parameters and their default values.
@@ -646,10 +704,10 @@ scn.print_predict(prompt='What is Artificial Intelligence (AI)?')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 14926.35it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 16438259.10it/s]
-Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 96.87it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 112.55it/s]
+Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 6626.07it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 16054997.97it/s]
+Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 94.94it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 110.19it/s]
 Artificial Intelligence is a field of computer science that develops systems capable of performing tasks that would normally require human intelligence, such as learning, reasoning, perception, and decision-making.
 ```
 To save a trained model so that you can use it in the future on any machine without having to train it again, simply call the method named "saveModel" right after calling the "train" method. The "saveModel" method will save two files with your model: one file with the network settings and another with the weights.
@@ -665,12 +723,13 @@ scn.saveModel() # save the model ("model.scn01" and "model.scn02" files)
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12520.31it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17881353.84it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 105.23it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 122.24it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 41873.25it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4753.29it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10305.42it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17901272.72it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 105.41it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 122.36it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 40009.26it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2442252.96it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4448.77it/s]
 ```
 Once you save your model, you never have to go through the hassle of retraining it or waiting for the weights adjustment process. Simply use the "loadModel" method to load the pre-trained model files and make your predictions as normal.
 ```python
@@ -683,8 +742,10 @@ scn.print_predict('What is the main language spoken in Spain?') # performs model
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4487.94it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 12599773.52it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3531.41it/s]
 The main language spoken in Spain is Spanish.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2083217.44it/s]
 ```
 With the "progress" parameter of the loading method, you can enable or disable the display of progress when loading the model.
 ```python
@@ -709,10 +770,10 @@ scn.saveModel(progress=False) # progress=False disables the saving progress bars
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11125.47it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18117943.84it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 106.58it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 123.73it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12372.58it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18370609.16it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 108.11it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 125.47it/s]
 ```
 To also hide the training progress, simply set False to "progress" parameters of training and model saving.
 ```python
@@ -738,12 +799,13 @@ scn.saveModel(model_path='my_model') # in this case the ".scn01" and "scn02" fil
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12192.74it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17954991.63it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 105.67it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 122.71it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 41734.37it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 5348.51it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12483.05it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17814746.86it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 104.90it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 121.77it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 40787.40it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2081488.62it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4262.50it/s]
 ```
 When there are files for more than one model, you can specify the path of the model you want to load in the "model_path" parameter of the loading method. Just pass the path to the model directory, and/or the name of the model files.
 ```python
@@ -755,8 +817,10 @@ scn.print_predict('What is the main language spoken in Spain?', stream=False, in
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4308.16it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 12148037.46it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3792.32it/s]
 The main language spoken in Spain is Spanish.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1903030.19it/s]
 ```
 You can also use the extension of one of the saved files if you want to make the code more readable.
 ```python
@@ -768,8 +832,10 @@ scn.print_predict('What is the main language spoken in Spain?', stream=False, in
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 5003.43it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 12663408.74it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3944.13it/s]
 The main language spoken in Spain is Spanish.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1840200.87it/s]
 ```
 Any of the extensions are valid.
 ```python
@@ -781,8 +847,10 @@ scn.print_predict('What is the main language spoken in Spain?', stream=False, in
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4947.78it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11860713.96it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3717.88it/s]
 The main language spoken in Spain is Spanish.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1874584.30it/s]
 ```
 The same goes for the saving method. The extension of one of the files is optional.
 ```python
@@ -795,12 +863,13 @@ scn.saveModel(model_path='my_model.scn02')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11491.24it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17917561.27it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 105.44it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 122.39it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 26772.15it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4637.66it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10205.12it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18380591.78it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 108.15it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 125.53it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 28308.01it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2091904.75it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4019.84it/s]
 ```
 Note that either model extension is valid and the result will be the same.
 ```python
@@ -813,12 +882,13 @@ scn.saveModel(model_path='my_model.scn01')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12052.60it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17975614.25it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 105.95it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 123.01it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 27030.96it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4468.68it/s]
+Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 9892.23it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18178801.60it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 106.96it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 124.12it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 30320.27it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2346299.15it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4160.19it/s]
 ```
 You can also specify a directory for the saved model files. If the specified directory does not exist, it will be created.
 ```python
@@ -832,12 +902,13 @@ scn.saveModel(model_path='./models/my_model')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12157.40it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18018008.11it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 106.16it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 123.34it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 50031.46it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4999.17it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10180.35it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18055393.41it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 106.86it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 124.03it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 47304.18it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2318108.87it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3974.89it/s]
 ```
 It is also possible to specify extensions with the directory.
 ```python
@@ -850,12 +921,13 @@ scn.saveModel(model_path='./models/model01.scn02')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12520.31it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18351961.08it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.99it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 125.44it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 41323.19it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 5127.51it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11748.75it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17708169.91it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 104.29it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 121.03it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 37282.70it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2097152.00it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4006.79it/s]
 ```
 Note that any of the model extensions are valid.
 ```python
@@ -868,12 +940,13 @@ scn.saveModel(model_path='./models/model02.scn01')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10979.85it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17981085.65it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 105.85it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 122.96it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 39444.87it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4712.70it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12018.06it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18187393.76it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.10it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 124.31it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 37063.07it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1954944.50it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3931.67it/s]
 ```
 Now to load simply specify the models directory followed by the name of one of the available models.
 ```python
@@ -885,8 +958,10 @@ scn.print_predict('What is the main language spoken in Spain?', stream=False, in
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4877.91it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 10751950.82it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3835.92it/s]
 The main language spoken in Spain is Spanish.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1942830.20it/s]
 ```
 It is also possible to specify the directory and name of the model with the extension when loading.
 ```python
@@ -898,8 +973,10 @@ scn.print_predict('What is the main language spoken in Spain?', stream=False, in
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4234.84it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11035893.18it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3733.49it/s]
 The main language spoken in Spain is Spanish.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1993794.75it/s]
 ```
 Any model extension is valid.
 ```python
@@ -911,8 +988,10 @@ scn.print_predict('What is the main language spoken in Spain?', stream=False, in
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 5017.11it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11324999.69it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3690.31it/s]
 The main language spoken in Spain is Spanish.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2042503.09it/s]
 ```
 You can also treat the save routine as a function by getting its return state where we will have True if the save is successful or False otherwise.
 ```python
@@ -926,12 +1005,13 @@ else: print('ERROR saving model.') # displays a failure message if there some er
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10645.44it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18048245.65it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 106.23it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 123.42it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 26915.32it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4578.93it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11748.75it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18499276.67it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 108.92it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 126.39it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 28728.11it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1838851.75it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3834.62it/s]
 Model saved SUCCESSFULLY!
 ```
 Note that the loading routine can also be treated as a function.
@@ -945,8 +1025,10 @@ else: print('ERROR loading pre-trained model!!') # displays an error message if 
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 5117.68it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11771619.40it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3848.49it/s]
 The main language spoken in Spain is Spanish.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2011382.35it/s]
 ```
 Below is an example with all the parameters of the save routine and their default values.
 ```python
@@ -962,12 +1044,13 @@ else: print('ERROR saving model.')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12192.74it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17942318.39it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 105.53it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 122.45it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 25944.15it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4757.60it/s]
+Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 6413.31it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18160697.97it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.09it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 124.24it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 27235.74it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2192477.09it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3949.44it/s]
 Model saved SUCCESSFULLY!
 ```
 Below is an example with all the parameters of the load routine and their default values.
@@ -981,8 +1064,10 @@ else: print('ERROR loading pre-trained model!!')
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4981.36it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 10706041.55it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3812.51it/s]
 The main language spoken in Spain is Spanish.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1916114.43it/s]
 ```
 To perform model inference, you can use two methods. The "predict" method works as a function that returns the result of the inference. The "print_predict" method will display the result of the inference. Both have the same parameters and produce exactly the same result.
 ```python
@@ -994,12 +1079,13 @@ scn.saveModel(model_path='./models/my_model')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12520.31it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17881125.14it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 105.56it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 122.59it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 29026.33it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4725.44it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12228.29it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18198441.49it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.15it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 124.32it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 25653.24it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2346299.15it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3971.13it/s]
 ```
 After training your model, simply use the "predict" or "print_predict" method. The "print_predict" method is more practical because it does not require manipulation of the return value.
 ```python
@@ -1011,8 +1097,10 @@ scn.print_predict('Hello! Who are you?')
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4984.74it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 10939593.94it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3514.08it/s]
 Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1868996.86it/s]
 ```
 The inference "prompt" parameter is used to receive the input that will be transformed into an output.
 ```python
@@ -1026,8 +1114,10 @@ scn.print_predict(prompt='Hello! Who are you?')
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4939.46it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 10826230.27it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3816.97it/s]
 Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1993794.75it/s]
 ```
 With the "max_tokens" parameter you can set an integer for the maximum limit of tokens to be returned in the response.
 ```python
@@ -1041,8 +1131,10 @@ scn.print_predict(prompt='Hello! Who are you?', max_tokens=2) # max_tokens=2 wil
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 5193.73it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11586667.89it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3926.20it/s]
 Hello!
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1862059.24it/s]
 ```
 You can access the probability of the inference with the level of certainty of the answer in percentage numbers between 0 and 1, where 0 will be a completely uncertain answer and 1 will be an answer with 100% certainty of being the correct answer. To do this, simply access the public variable named "probability" through the class object, right after the inference for which you want to know the level of certainty.
 ```python
@@ -1057,9 +1149,11 @@ print('Probability of answer:', scn.probability) # displays the probability with
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4867.40it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 10526259.16it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3820.94it/s]
 Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 Probability of answer: 0.625
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1885859.99it/s]
 ```
 With the "min_probability" parameter of the prediction method, it is possible to define a minimum probability for the response to be returned. If this minimum probability is not reached, the response will be an empty string.
 ```python
@@ -1076,10 +1170,12 @@ print('Probability achieved:', scn.probability)
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4898.25it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11629661.09it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3694.03it/s]
 
 Minimum desired probability: 0.98
 Probability achieved: 0.625
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1965669.12it/s]
 ```
 With the "generalization" parameter set to True, you enable the model to generalize the response to inputs it was not trained on, adapting the response to new information. If "generalization" is set to False, you disable the model's generalization, causing it to not generalize to inputs it was not trained on and returning only the training response closest to the specified input.
 ```python
@@ -1098,9 +1194,11 @@ scn.print_predict(prompt=prompt, generalization=True) # generalized/adapted resp
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 5091.06it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 10761179.96it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3578.76it/s]
 The main language spoken in Spain is Spanish.
 The principal language spoken in Mexico is Spanish.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1987475.27it/s]
 ```
 With the "stream" parameter of the prediction method, it is possible to displays token by token with True, or the complete response at once with False.
 ```python
@@ -1113,8 +1211,10 @@ scn.print_predict(prompt='Hello! Who are you?', stream=True)
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4867.40it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 10939593.94it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3880.02it/s]
 Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1993794.75it/s]
 ```
 It is also possible to combine enabling the "stream" parameter when it is equal to True with the "interval" parameter, which will receive a floating number referring to the minimum interval in seconds to be waited between one token and another.
 ```python
@@ -1128,8 +1228,10 @@ scn.print_predict(prompt='Hello! Who are you?', stream=True, interval=0.05) # in
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 5068.21it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 12412648.17it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3847.99it/s]
 Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1047262.54it/s]
 ```
 If you call the "addFit" method after model training or loading, a fine-tuning is applied on top of the current model. This can be especially useful for fine-tuning responses to inputs that are being incorrectly inferred by the base model, or for adding new data to the current model without having to retrain it from scratch.
 ```python
@@ -1146,7 +1248,16 @@ scn.addFit('Tell me the name of the capital of Spain.', 'The capital of Spain is
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4848.11it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11203551.97it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3763.15it/s]
+Encoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [00:00<00:00, 600727.93it/s]
+Decoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 834/834 [00:00<00:00, 5632930.01it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 341/341 [00:00<00:00, 1862314.67it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 1704/1704 [00:00<00:00, 11202341.72it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 458/458 [00:00<00:00, 2292352.31it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2289/2289 [00:00<00:00, 14568682.63it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 2799376.56it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2091904.75it/s]
 ```
 Now just load the adjusted model with the knowledge of the base model plus the knowledge of the fine-tuning.
 ```python
@@ -1159,9 +1270,13 @@ scn.print_predict(prompt='What does the acronym GPT mean in language models?', s
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4020.28it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 10715192.01it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2939/2939 [00:00<00:00, 13866208.61it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 2795.67it/s]
 Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 GPT in language models stands for Generative Pre-trained Transformer.
+Encoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 464652.43it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 1646362.32it/s]
 ```
 When your model is fine-tuned, you can access the probability that the current input belongs to the body of knowledge of the data added to the fine-tuning using the global variable named "fit_probability".
 ```python
@@ -1177,11 +1292,15 @@ print('Fine-tuning probability:', scn.fit_probability) # displays the probabilit
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4569.67it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 12054591.02it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2939/2939 [00:00<00:00, 14120343.02it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 2935.13it/s]
 Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 Fine-tuning probability: 0.0
 GPT in language models stands for Generative Pre-trained Transformer.
 Fine-tuning probability: 1.0
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1476276.51it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 1954239.90it/s]
 ```
 Prediction methods also have a parameter named "min_fit_probability" that will receive a float between 0 and 1 with the minimum expected value for the global variable "fit_probability". If "fit_probability" is less than "min_fit_probability", the model will disregard the fine-tuning data and will look for its answer only in the base model data.
 ```python
@@ -1203,12 +1322,16 @@ print(f'Expected probability for returning a response of fine-tuning: {min_fit_p
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3828.92it/s]
+Decoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 9794355.20it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2939/2939 [00:00<00:00, 15181107.70it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 2908.96it/s]
 The capital of Spain is Madrid.
 Expected probability for returning a response of fine-tuning: 0.8 - Probability achieved in the fine-tuning: 1.0.
 
 The capital of Spain is Lisbon.
 Expected probability for returning a response of fine-tuning: 0.8 - Probability achieved in the fine-tuning: 0.6527777777777778.
+Encoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 729338.12it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 1588055.86it/s]
 ```
 Check out an example below with all the parameters of the "print_predict" method in their respective orders and with their default values.
 ```python
@@ -1229,8 +1352,12 @@ scn.print_predict( # performs model inference and displays the result
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4260.65it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 10977911.26it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2939/2939 [00:00<00:00, 13928880.74it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 2921.70it/s]
 Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2034220.43it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 2566337.93it/s]
 ```
 The "predict" function works exactly the same way and with the same parameters as the "print_predict" function, with the difference that instead of displaying the answer, it will return the answer, giving the developer more flexibility to manipulate the output as they wish.
 ```python
@@ -1253,8 +1380,12 @@ print(inference) # displays the inference result returned by the prediction func
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 2837.55it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11193548.80it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2939/2939 [00:00<00:00, 14553789.20it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 2977.40it/s]
 {'answer': 'Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.', 'fit_probability': 0.0, 'probability': 0.625}
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2098906.94it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 2503807.87it/s]
 ```
 See below how to access each of the return values.
 ```python
@@ -1275,10 +1406,14 @@ print('probability:', probability) # displays the final probability
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3329.19it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 10939593.94it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2939/2939 [00:00<00:00, 14923800.79it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3073.07it/s]
 answer: Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 fit_probability: 0.0
 probability: 0.625
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2021107.00it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 2545150.41it/s]
 ```
 Now check out an example returning one token at a time with the "stream" parameter equal to True.
 ```python
@@ -1302,10 +1437,14 @@ print('probability:', probability)
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3112.49it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 12101133.84it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2939/2939 [00:00<00:00, 15218591.92it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 2713.25it/s]
 Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 fit_probability: 0.0
 probability: 0.625
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1308395.30it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 1749114.01it/s]
 ```
 Below is an example with an effective test on all input prompts contained in the JSON file that was used in the training.
 ```python
@@ -1328,7 +1467,9 @@ for data in json_data['data']:
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4281.77it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 12400370.58it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2939/2939 [00:00<00:00, 14710094.82it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3099.68it/s]
 Prompt: Hello! Who are you?
 Answer: Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 
@@ -1349,6 +1490,9 @@ Answer: The result of five minus three is two.
 
 Prompt: What is your name?
 Answer: My name is Sapiens Chat.
+
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1340563.22it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 1713864.32it/s]
 
 ```
 When you train a model and certain inputs are giving incorrect or inaccurate answers, you should fine-tune it on top of the original training. Fine-tuning can also be especially useful when you need to add new data to an already trained model where retraining would be costly and inefficient. To fine-tune a pre-trained model, simply call the "addFit" method right after training or loading a model to add new fine-tuned data to the existing model.
@@ -1375,10 +1519,10 @@ scn.print_predict(prompt=INPUT, stream=True, interval=0.05)
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 14074.85it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17677793.51it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 103.26it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 119.93it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12483.05it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18228575.15it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.28it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 124.55it/s]
 Prompt: Hello! Who are you?
 Answer: Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 
@@ -1395,12 +1539,13 @@ scn.saveModel('./models_for_adjustment/model01')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10512.04it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18683617.61it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 109.75it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 127.42it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 44150.57it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4381.85it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12300.01it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18094963.63it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 106.53it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 123.58it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 46517.23it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2047505.14it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3921.38it/s]
 ```
 In the following example, we demonstrate a case where the model will need to be adjusted for an incorrect answer.
 ```python
@@ -1417,9 +1562,11 @@ scn.print_predict(prompt=prompt, stream=True, interval=0.05)
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 5148.19it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11771619.40it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3961.70it/s]
 Prompt: Please, could you tell me who were the discoverers of Brazil?
 Answer: The discoverers of Brazil is Lisbon.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1236172.40it/s]
 ```
 Now that we have identified an incorrect answer, we will load the model that is answering incorrectly and adjust it with the answer we want for the previous test input.
 ```python
@@ -1437,7 +1584,10 @@ scn.addFit(INPUT, OUTPUT) # the first parameter receives the input and the secon
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4972.08it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11233669.05it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3884.64it/s]
+Encoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 208/208 [00:00<00:00, 782435.19it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1941326.46it/s]
 ```
 Now after fine-tuning we will test the base model that previously emitted the incorrect response.
 ```python
@@ -1453,9 +1603,13 @@ scn.print_predict(prompt=prompt, stream=True, interval=0.05)
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4174.03it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 10597442.65it/s]
+Decoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 1040/1040 [00:00<00:00, 6923930.41it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 2969.87it/s]
 Prompt: Please, could you tell me who were the discoverers of Brazil?
 Answer: Brazil was discovered by Portuguese navigators led by Pedro Alvares Cabral in 1500.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1513695.71it/s]
+Encoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 208/208 [00:00<00:00, 856148.41it/s]
 ```
 You can also add new adjustments to an already adjusted model.
 ```python
@@ -1471,7 +1625,17 @@ scn.addFit('Tell me the name of the capital of Spain.', 'The capital of Spain is
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3914.68it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 12599773.52it/s]
+Decoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 1040/1040 [00:00<00:00, 7318919.73it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3115.13it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 375/375 [00:00<00:00, 1261318.36it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 1874/1874 [00:00<00:00, 11576031.95it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 549/549 [00:00<00:00, 2652848.96it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2744/2744 [00:00<00:00, 14927587.78it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 666/666 [00:00<00:00, 2918920.03it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3329/3329 [00:00<00:00, 17719337.58it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 796/796 [00:00<00:00, 3123167.43it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2198241.71it/s]
 ```
 Now realize that the base model contains the data from training, first fit, and later fit.
 ```python
@@ -1507,7 +1671,9 @@ scn.print_predict(prompt=prompt, stream=True, interval=0.05)
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3928.30it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11760576.60it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3979/3979 [00:00<00:00, 17312381.34it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3017.48it/s]
 Prompt: Hello! Who are you?
 Answer: Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 
@@ -1522,6 +1688,8 @@ Answer: GPT in language models stands for Generative Pre-trained Transformer.
 
 Prompt: What is the capital of Spain?
 Answer: The capital of Spain is Madrid.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1280997.85it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 796/796 [00:00<00:00, 2192164.14it/s]
 ```
 To make the code easier to read, you can specify the names of the input and output parameters when assigning values.
 ```python
@@ -1533,12 +1701,13 @@ scn.saveModel('./models_for_adjustment/model02')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10618.49it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18527796.31it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 108.84it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 126.42it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 40459.52it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 5097.60it/s]
+Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 9986.44it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17977232.20it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 105.88it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 122.88it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 42013.06it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2134633.01it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4335.65it/s]
 ```
 With the base model saved, we can now apply our fine-tuning.
 ```python
@@ -1555,7 +1724,16 @@ scn.addFit(prompt='Tell me the name of the capital of Spain.', answer='The capit
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 5251.32it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11749554.50it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3680.14it/s]
+Encoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [00:00<00:00, 637351.02it/s]
+Decoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 834/834 [00:00<00:00, 5753370.95it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 341/341 [00:00<00:00, 1742092.16it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 1704/1704 [00:00<00:00, 11115231.75it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 458/458 [00:00<00:00, 2371594.11it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2289/2289 [00:00<00:00, 14223350.90it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 2569011.20it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2012996.62it/s]
 ```
 Note that after fine-tuning the model will respond to both inputs from the base model and inputs that were added via fine-tuning.
 ```python
@@ -1623,7 +1801,9 @@ print()
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4093.72it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 12351502.12it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3979/3979 [00:00<00:00, 18688841.68it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3097.39it/s]
 Prompt: Hello! Who are you?
 Answer: Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 
@@ -1657,6 +1837,8 @@ Answer: The capital of Spain is Madrid.
 Prompt: Tell me the name of the capital of Spain.
 Answer: The capital of Spain is Madrid.
 
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1413863.47it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 796/796 [00:00<00:00, 2261968.82it/s]
 ```
 To fit your model to chat, you must specify a different "id" number for each fit added to the chat. Then simply specify this same "id" to the "relationship_id" parameter of the fit with the answer that should be considered when the previous inference to response with the answer of the fit with the same "id" as the current "relationship_id" and the inputs of the fit and the current inference are the same or similar.
 ```python
@@ -1668,12 +1850,13 @@ scn.saveModel('./models_for_adjustment/chat-model')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10512.04it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18446474.36it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 108.53it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 125.99it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 42013.06it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 5197.40it/s]
+Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 9822.73it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18212270.03it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.31it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 124.53it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 39199.10it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1951901.78it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4057.96it/s]
 ```
 With the base model trained, we will prepare it so that it can be used as a chat, relating the "relationship_id" parameters with the "id" name parameters in the "addFit" method.
 ```python
@@ -1699,7 +1882,26 @@ scn.addFit(prompt="No, you can't.", answer="Okay, if you need anything I'll be h
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 5069.08it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11153714.11it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3771.37it/s]
+Encoding file: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 84/84 [00:00<00:00, 351267.73it/s]
+Decoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 419/419 [00:00<00:00, 3278756.30it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 187/187 [00:00<00:00, 1133431.86it/s]
+Decoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 934/934 [00:00<00:00, 7548130.90it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 297/297 [00:00<00:00, 1588913.63it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 1484/1484 [00:00<00:00, 11075350.78it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 405/405 [00:00<00:00, 2249924.66it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2024/2024 [00:00<00:00, 14789671.25it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 520/520 [00:00<00:00, 2509825.18it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2600/2600 [00:00<00:00, 15209470.57it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 626/626 [00:00<00:00, 2885312.42it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3129/3129 [00:00<00:00, 18615570.52it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 763/763 [00:00<00:00, 2993689.38it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3814/3814 [00:00<00:00, 20748476.60it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 919/919 [00:00<00:00, 3233695.79it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 4594/4594 [00:00<00:00, 22510084.79it/s]
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 1044/1044 [00:00<00:00, 3472524.49it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2076319.36it/s]
 ```
 Now we will test our chat model.
 ```python
@@ -1776,7 +1978,9 @@ print()
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4002.20it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11449109.27it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 5219/5219 [00:00<00:00, 21211310.64it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 2845.80it/s]
 You: Hello!
 Bot: Hello everything is fine?
 
@@ -1813,6 +2017,8 @@ Bot: Hi, I am fine. Can I help you with anything?
 You: No, you can't.
 Bot: Okay, if you need anything I'll be here.
 
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1182552.47it/s]
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 1044/1044 [00:00<00:00, 2457269.01it/s]
 ```
 You can also add hidden layers to your network. By adding hidden layers, the fit will be performed with a [HurNetTorch](https://github.com/sapiens-technology/HurNetTorch) type neural network. Hidden layers only apply to fits for instruction models, i.e. where the "id" and "relationship_id" parameters are not defined.
 ```python
@@ -1824,12 +2030,13 @@ scn.saveModel('./models_for_adjustment/hurnet-model')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10205.12it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18195994.05it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.02it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 124.29it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 35951.18it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4869.17it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12087.33it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18104179.98it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 106.56it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 123.63it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 41391.16it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2069466.83it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4218.77it/s]
 ```
 After training we will apply fine-tuning with hidden layers to improve pattern abstraction.
 ```python
@@ -1867,9 +2074,11 @@ scn.saveModel('./models_for_adjustment/hurnet-model') # in the scn module it is 
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4568.25it/s]
-Fitting model: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 59.88it/s]
-Saving model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 14122.24it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11376383.54it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3816.47it/s]
+Fitting model: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 59.31it/s]
+Saving model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 13617.87it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1856546.11it/s]
 ```
 Now we will test the result of the fit by running some inferences.
 ```python
@@ -1891,13 +2100,15 @@ print()
 
 ```
 ```bash
-Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 323.95it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11284225.61it/s]
+Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 326.96it/s]
 Prompt: If I have five fingers on one hand and two on the other, do I have an even number or an odd number?
 Answer: You have 7 fingers, so it's an odd number.
 
 Prompt: The square root of 25 is what?
 Answer: The square root of 25 is the same as 5 multiplied by 5, so the square root of 25 is 5.
 
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1079721.82it/s]
 ```
 When performing a new adjustment with the [HurNetTorch](https://github.com/sapiens-technology/HurNetTorch) network, any previous adjustment with the [HurNetTorch](https://github.com/sapiens-technology/HurNetTorch) architecture will be overwritten by the current adjustment.
 ```python
@@ -1922,9 +2133,11 @@ scn.saveModel('./models_for_adjustment/hurnet-model')
 
 ```
 ```bash
-Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 346.02it/s]
-Fitting model: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 98.41it/s]
-Saving model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 14084.30it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 12207180.78it/s]
+Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 340.27it/s]
+Fitting model: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 94.07it/s]
+Saving model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 13025.79it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1817531.73it/s]
 ```
 Now we will test the new fine-tunings with the [HurNetTorch](https://github.com/sapiens-technology/HurNetTorch) neural network.
 ```python
@@ -1940,9 +2153,11 @@ scn.print_predict(prompt=prompt, stream=True, interval=0.05)
 
 ```
 ```bash
-Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 372.18it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11716611.83it/s]
+Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 354.87it/s]
 Prompt: If I have five fingers on one hand and two on the other, do I have an even number or an odd number?
 Answer: Hi! You have 7 fingers, so it's an odd number.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1434893.47it/s]
 ```
 You can add a hidden layer without neurons. This way the fine-tuning training will be done with a HurNetTorch network without hidden layers.
 ```python
@@ -1969,9 +2184,11 @@ scn.saveModel('./models_for_adjustment/hurnet-model')
 ```
 
 ```bash
-Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 364.05it/s]
-Fitting model: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 99.59it/s]
-Saving model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 14779.08it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 10977911.26it/s]
+Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 353.74it/s]
+Fitting model: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 96.35it/s]
+Saving model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 12725.44it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1987475.27it/s]
 ```
 Now just load the new adjusted model.
 ```python
@@ -1987,9 +2204,11 @@ scn.print_predict(prompt=prompt, stream=True, interval=0.05)
 
 ```
 ```bash
-Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 370.19it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11951167.45it/s]
+Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 348.55it/s]
 Prompt: If I have five fingers on one hand and two on the other, do I have an even number or an odd number?
 Answer: Hi! You have 7 fingers, so it's an odd number.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1384977.25it/s]
 ```
 Bellow, check out the possible parameters for the "fit" method.
 ```python
@@ -2021,9 +2240,11 @@ scn.saveModel('./models_for_adjustment/hurnet-model')
 
 ```
 ```bash
-Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 364.22it/s]
-Fitting model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 117.28it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3450.97it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11284225.61it/s]
+Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 354.48it/s]
+Fitting model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 121.87it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3477.29it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1935334.72it/s]
 ```
 Below we have a test with the previous fine-tuning.
 ```python
@@ -2044,13 +2265,15 @@ print()
 
 ```
 ```bash
-Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 253.99it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11815998.73it/s]
+Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 288.85it/s]
 Prompt: If I have five fingers on one hand and two on the other, do I have an even number or an odd number?
 Answer: You have 7 fingers, so it's an odd number.
 
 Prompt: The square root of 25 is what?
 Answer: The square root of 25 is the same as 5 multiplied by 5, so the square root of 25 is 5.
 
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1378128.46it/s]
 ```
 Now look at an example without the fine-tuning progress visualization.
 ```python
@@ -2134,12 +2357,13 @@ scn.saveModel('./models_for_adjustment/hurnet-model')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 14266.34it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17723584.52it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 104.48it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 121.41it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 24600.02it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4713.76it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11915.64it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18017388.91it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 106.04it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 123.02it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 29262.59it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2027642.52it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3987.74it/s]
 ```
 ```python
 from scn import SCN
@@ -2165,9 +2389,11 @@ scn.saveModel('./models_for_adjustment/hurnet-model')
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4821.04it/s]
-Fitting model: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 65.50it/s]
-Saving model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 12881.77it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11996913.55it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3489.44it/s]
+Fitting model: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 67.15it/s]
+Saving model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 14573.68it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1971850.47it/s]
 ```
 ```python
 from scn import SCN
@@ -2177,8 +2403,10 @@ scn.print_predict(prompt='The square root of 25 is what?', stream=True, interval
 
 ```
 ```bash
-Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 297.16it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11243744.09it/s]
+Loading model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 287.12it/s]
 Hi! The square root of 25 is the same as 5 multiplied by 5, so the square root of 25 is 5.
+Encoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 996897.37it/s]
 ```
 With SCN you have the possibility of performing continuous pre-training. This makes it possible to add knowledge to a pre-trained model through subsequent training.
 ```python
@@ -2190,12 +2418,13 @@ scn.saveModel('./base_model/model')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10330.80it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17527534.71it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 103.22it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 119.95it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 51675.20it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4897.60it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11748.75it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18324059.84it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.86it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 125.18it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 48865.68it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2000154.54it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3980.17it/s]
 ```
 To perform continuous pre-training, simply load a pre-trained model and then perform new training on top of it.
 ```python
@@ -2207,15 +2436,20 @@ scn.saveModel('./continuous_pre_training/model')
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 5169.95it/s]
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 17260.51it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 15940832.41it/s]
-Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 95.12it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 110.64it/s]
-Generating 500U parameters: 100%|██████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 45839.39it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3965.12it/s]
-Transferring learn - scn02: 100%|████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 4870279.21it/s]
-Continuous Pre-training: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 2158.30it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 10403962.37it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3699.61it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 19152.07it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 16666881.25it/s]
+Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 99.42it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 115.67it/s]
+Generating 500U parameters: 100%|██████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 50031.46it/s]
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2134/2134 [00:00<00:00, 4184499.64it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3382.50it/s]
+Decoding file: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 10669/10669 [00:00<00:00, 29001315.21it/s]
+Transferring learn - scn02: 100%|████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 5036533.72it/s]
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2732/2732 [00:00<00:00, 5464396.06it/s]
+Continuous Pre-training: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 1685.36it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2121991.36it/s]
 ```
 Now the second model contains the data from both the first and second datasets. You can repeat the process as many times as you want with new trainings.
 ```python
@@ -2227,9 +2461,11 @@ scn.print_predict(prompt='What is Artificial Intelligence?', stream=True, interv
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4348.36it/s]
+Decoding file: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 13659/13659 [00:00<00:00, 27254994.45it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3297.41it/s]
 Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 Artificial Intelligence is a field of computer science that develops systems capable of performing tasks that would normally require human intelligence, such as learning, reasoning, perception, and decision-making.
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2732/2732 [00:00<00:00, 3107903.05it/s]
 ```
 Another way to transfer knowledge from one model to another is through the function called "transferLearning".
 ```python
@@ -2240,12 +2476,13 @@ scn.saveModel('./model01/model01')
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12157.40it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17455974.10it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 102.85it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 119.52it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 42871.93it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4573.94it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12192.74it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17906928.29it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 105.37it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 122.09it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 49248.19it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2069466.83it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4131.51it/s]
 ```
 ```python
 from scn import SCN
@@ -2255,12 +2492,13 @@ scn.saveModel('./model02/model02')
 
 ```
 ```bash
-Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 9892.23it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 15725494.90it/s]
-Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 92.81it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 107.87it/s]
-Generating 500U parameters: 100%|██████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 49152.00it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4029.11it/s]
+Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 9341.43it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 15739303.38it/s]
+Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 92.85it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 107.90it/s]
+Generating 500U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 6439.57it/s]
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2134/2134 [00:00<00:00, 3997608.19it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 2075.57it/s]
 ```
 Now we will apply a learning transfer from the first model to the second.
 ```python
@@ -2274,7 +2512,11 @@ scn.transferLearning( # returns True if transfer learning is successful, or Fals
 
 ```
 ```bash
-Transferring learn - scn02: 100%|████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2720383.72it/s]
+Decoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 9461716.72it/s]
+Decoding file: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 10669/10669 [00:00<00:00, 26604654.80it/s]
+Transferring learn - scn02: 100%|████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 4527425.62it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2717436.39it/s]
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2732/2732 [00:00<00:00, 4995134.49it/s]
 ```
 Now the second model also has the knowledge of the previous model.
 ```python
@@ -2286,9 +2528,11 @@ scn.print_predict(prompt='What is Artificial Intelligence?', stream=True, interv
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4211.75it/s]
+Decoding file: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 13659/13659 [00:00<00:00, 26884091.19it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3070.18it/s]
 Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 Artificial Intelligence is a field of computer science that develops systems capable of performing tasks that would normally require human intelligence, such as learning, reasoning, perception, and decision-making.
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2732/2732 [00:00<00:00, 2827946.33it/s]
 ```
 The SCN module has some useful functions to facilitate the process of developing language model algorithms based on semantic comparison. With the "downloadFile" function, you can locally download any file contained in a public address of WEB.
 ```python
@@ -2329,7 +2573,7 @@ else: print('ERROR downloading file.')
 
 ```
 ```bash
-dataset.txt: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.36k/2.36k [00:00<00:00, 4.16MB/s]
+dataset.txt: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.36k/2.36k [00:00<00:00, 6.22MB/s]
 File downloaded SUCCESSFULLY!!
 ```
 The "overwriteWithHexadecimal" function converts any file type into an unreadable binary file with hexadecimal content, but be careful, the original file will be overwritten and will no longer exist.
@@ -2361,7 +2605,7 @@ else: print('ERROR converting file.') # displays a failure message if there is a
 
 ```
 ```bash
-Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2364/2364 [00:00<00:00, 2851692.45it/s]
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2364/2364 [00:00<00:00, 3555157.64it/s]
 File converted SUCCESSFULLY!!
 ```
 The "restoreOriginalFromHexadecimal" function restores a file converted with the "overwriteWithHexadecimal" function recovering the original file.
@@ -2393,7 +2637,7 @@ else: print('ERROR restoring file.') # displays a failure message if there is an
 
 ```
 ```bash
-Decoding file: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 11819/11819 [00:00<00:00, 14981105.76it/s]
+Decoding file: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 11819/11819 [00:00<00:00, 22512479.10it/s]
 File restored SUCCESSFULLY!!
 ```
 The "fileToEncryptedHEX" function converts any file type into an encrypted binary file with hexadecimal content, but be careful, the original file will be overwritten and will no longer exist.
@@ -2425,7 +2669,7 @@ else: print('ERROR converting file.') # displays a failure message if there is a
 
 ```
 ```bash
-Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2364/2364 [00:00<00:00, 2277816.37it/s]
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2364/2364 [00:00<00:00, 3224499.08it/s]
 File converted SUCCESSFULLY!!
 ```
 The "encryptedHEXToFile" function restores a file converted with the "fileToEncryptedHEX" function recovering the original file.
@@ -2457,7 +2701,7 @@ else: print('ERROR restoring file.') # displays a failure message if there is an
 
 ```
 ```bash
-Decoding file: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 11819/11819 [00:00<00:00, 12671901.58it/s]
+Decoding file: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 11819/11819 [00:00<00:00, 19088363.10it/s]
 File restored SUCCESSFULLY!!
 ```
 The function called "loadJSON" that can load the content of a local or web JSON file, or even a string containing a JSON, always returning a dictionary or a list as a response.
@@ -2790,13 +3034,23 @@ scn.addFit(prompt='Tell me the name of the capital of Spain.', answer='The capit
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10538.45it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 17668782.78it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 104.00it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 120.77it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 39260.26it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4984.91it/s]
-Loading model: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 13406.45it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12052.60it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18602492.57it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 109.38it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 126.97it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 37957.50it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1923461.50it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3955.40it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 15829260.93it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 8527.48it/s]
+Encoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [00:00<00:00, 970150.65it/s]
+Decoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 834/834 [00:00<00:00, 7010119.31it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 341/341 [00:00<00:00, 1975494.01it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 1704/1704 [00:00<00:00, 13042142.36it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 458/458 [00:00<00:00, 2588936.97it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2289/2289 [00:00<00:00, 14977787.61it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 2722131.07it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2098906.94it/s]
 ```
 Now, to retrieve the training and fine-tuning data, simply call the "getTrainingText" function, which will return all the retrieved text.
 ```python
@@ -2808,7 +3062,9 @@ print(recovered_text) # displays all content retrieved from the loaded model
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3914.16it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11284225.61it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2939/2939 [00:00<00:00, 13992121.97it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 2926.06it/s]
 Hello! Who are you?
 Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 
@@ -2841,6 +3097,8 @@ The capital of Spain is Madrid.
 
 Tell me the name of the capital of Spain.
 The capital of Spain is Madrid.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1954944.50it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 2369116.96it/s]
 ```
 You can also use the "max_tokens" name parameter of the "getTrainingText" function to limit the number of tokens in the retrieved text, so that the returned string will never exceed that amount of tokens.
 ```python
@@ -2853,12 +3111,16 @@ print(recovered_text) # displays all content retrieved from the loaded model
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4102.87it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 11026187.03it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2939/2939 [00:00<00:00, 14553789.20it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 2858.55it/s]
 Hello! Who are you?
 Hello! I am Sapiens Chat, an AI model created by Sapiens Technology.
 
 Who discovered Brazil?
 Brazil was discovered by Portuguese navigators led by Pedro Alvares Cabral in 1500.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1993794.75it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 2091815.74it/s]
 ```
 The "alternativeVectorComparison" function compares a numeric vector with the numeric vectors of a matrix and returns the index and vector of the matrix that most closely matches the input vector. The comparison is made with differentiation calculations, without considering the order of the elements.
 ```python
@@ -3249,13 +3511,33 @@ scn.addFit(prompt="No, you can't.", answer="Okay, if you need anything I'll be h
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12157.40it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18356780.22it/s]
-Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 107.93it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 125.29it/s]
-Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 35696.20it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 4825.48it/s]
-Loading model: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 10280.16it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12520.31it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 18573084.71it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 109.20it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 126.67it/s]
+Generating 91U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 38716.65it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1992211.11it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3999.91it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 15326130.39it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 8475.79it/s]
+Encoding file: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 84/84 [00:00<00:00, 552228.11it/s]
+Decoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 419/419 [00:00<00:00, 3550330.05it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 187/187 [00:00<00:00, 1074431.30it/s]
+Decoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 934/934 [00:00<00:00, 7914100.88it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 297/297 [00:00<00:00, 1777044.63it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 1484/1484 [00:00<00:00, 12156928.00it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 405/405 [00:00<00:00, 1993771.27it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2024/2024 [00:00<00:00, 14148785.49it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 520/520 [00:00<00:00, 2695967.96it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2600/2600 [00:00<00:00, 16907271.94it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 626/626 [00:00<00:00, 2966818.42it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3129/3129 [00:00<00:00, 18748538.88it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 763/763 [00:00<00:00, 3375795.31it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3814/3814 [00:00<00:00, 19773888.08it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 919/919 [00:00<00:00, 3236410.90it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 4594/4594 [00:00<00:00, 22857215.39it/s]
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 1044/1044 [00:00<00:00, 3837733.02it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 2190562.26it/s]
 ```
 See what happens if we try to interact with two users at the same time without setting the "user_id" parameter for each of them.
 ```python
@@ -3424,12 +3706,13 @@ scn.saveModel('./my_models/my_model') # saves the model with the value assigned 
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10866.07it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 16511707.74it/s]
-Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 97.54it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 113.29it/s]
-Generating 500U parameters: 100%|██████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 32058.37it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 2604.19it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11366.68it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 16678015.17it/s]
+Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 98.20it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 114.02it/s]
+Generating 500U parameters: 100%|██████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 16341.44it/s]
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2134/2134 [00:00<00:00, 4244023.11it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3067.36it/s]
 ```
 Now see the model's inference including candidate responses with probability equal to or greater than 0.5.
 ```python
@@ -3442,20 +3725,20 @@ scn.print_predict(prompt='Talk about AI.', stream=True, interval=0.01)
 
 ```
 ```bash
-What is natural language processing (NLP)? 
- It is a field of AI that enables machines to understand, interpret, and generate human language, used in machine translation, chatbots, and voice assistants. 
- 
- How is AI used in everyday life? 
+How is AI used in everyday life? 
  AI is present in virtual assistants (Siri, Alexa), recommendation systems (Netflix, Spotify), facial recognition, autonomous cars, medical diagnostics, chatbots, and much more. 
  
- What is a generative AI model? 
- It is a type of AI that can create new content, such as images, text, and music, based on patterns learned from large amounts of data. Examples include ChatGPT and DALL·E. 
+ What is natural language processing (NLP)? 
+ It is a field of AI that enables machines to understand, interpret, and generate human language, used in machine translation, chatbots, and voice assistants. 
  
  What is Machine Learning and how is it related to AI? 
  Machine Learning is a subfield of AI that teaches machines to learn patterns from data without explicit programming. It allows systems to improve their performance over time with experience. 
  
  Can AI replace humans in the workforce? 
  AI can automate repetitive and analytical tasks, but it is unlikely to fully replace humans in creative, emotional, and critical thinking jobs. 
+ 
+ What is a generative AI model? 
+ It is a type of AI that can create new content, such as images, text, and music, based on patterns learned from large amounts of data. Examples include ChatGPT and DALL·E. 
  
  What is the difference between weak AI and strong AI? 
  Weak AI (or narrow AI) is designed for specific tasks, such as virtual assistants and recommendation systems. Strong AI, on the other hand, would have self-awareness and the ability to understand and reason about ai subject like a human being.
@@ -3472,12 +3755,13 @@ scn.saveModel('./my_models/my_model') # the saved model will use the last value 
 
 ```
 ```bash
-Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11881.88it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 16597826.69it/s]
-Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 97.82it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 113.58it/s]
-Generating 500U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 7635.26it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 2555.01it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12985.46it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 16996677.09it/s]
+Tokenizing data: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 100.15it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 116.31it/s]
+Generating 500U parameters: 100%|██████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 11672.46it/s]
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2134/2134 [00:00<00:00, 4192339.45it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 2747.48it/s]
 ```
 You can also use the global variable "minimum_probability_for_candidates" to override the value of this parameter in the loaded model.
 ```python
@@ -3496,20 +3780,20 @@ scn.print_predict(prompt=prompt, stream=True, interval=0.01)
 ```
 ```bash
 Prediction 1:
-How is AI used in everyday life? 
- AI is present in virtual assistants (Siri, Alexa), recommendation systems (Netflix, Spotify), facial recognition, autonomous cars, medical diagnostics, chatbots, and much more. 
- 
- What is the difference between weak AI and strong AI? 
- Weak AI (or narrow AI) is designed for specific tasks, such as virtual assistants and recommendation systems. Strong AI, on the other hand, would have self-awareness and the ability to understand and reason about ai subject like a human being. 
- 
- What is natural language processing (NLP)? 
- It is a field of AI that enables machines to understand, interpret, and generate human language, used in machine translation, chatbots, and voice assistants. 
- 
- What is Machine Learning and how is it related to AI? 
+What is Machine Learning and how is it related to AI? 
  Machine Learning is a subfield of AI that teaches machines to learn patterns from data without explicit programming. It allows systems to improve their performance over time with experience. 
  
  Can AI replace humans in the workforce? 
  AI can automate repetitive and analytical tasks, but it is unlikely to fully replace humans in creative, emotional, and critical thinking jobs. 
+ 
+ How is AI used in everyday life? 
+ AI is present in virtual assistants (Siri, Alexa), recommendation systems (Netflix, Spotify), facial recognition, autonomous cars, medical diagnostics, chatbots, and much more. 
+ 
+ What is natural language processing (NLP)? 
+ It is a field of AI that enables machines to understand, interpret, and generate human language, used in machine translation, chatbots, and voice assistants. 
+ 
+ What is the difference between weak AI and strong AI? 
+ Weak AI (or narrow AI) is designed for specific tasks, such as virtual assistants and recommendation systems. Strong AI, on the other hand, would have self-awareness and the ability to understand and reason about ai subject like a human being. 
  
  What is a generative AI model? 
  It is a type of AI that can create new content, such as images, text, and music, based on patterns learned from large amounts of data. Examples include ChatGPT and DALL·E.
@@ -3545,8 +3829,12 @@ scn.print_predict(prompt='Who discovered Brazil?', stream=True, interval=0.05)
 
 ```
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3709.90it/s]
+Decoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2989/2989 [00:00<00:00, 9863709.41it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 5219/5219 [00:00<00:00, 20138061.25it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 2826.35it/s]
 Brazil was discovered by Portuguese navigators led by Pedro Alvares Cabral in 1500.
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 598/598 [00:00<00:00, 1165517.56it/s]
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 1044/1044 [00:00<00:00, 2134984.58it/s]
 ```
 
 ## Methods
@@ -4174,61 +4462,60 @@ print(f'\nRuntime: {time_spent_transformer} seconds.') # displays the total time
 ```
 Runned on a Macbook M3 Max with 48GB of VRAM.
 ```bash
-Epoch 0000000001 - current precision is 0.0000; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.86it/s]
-Epoch 0000000002 - current precision is 0.0000; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.82it/s]
-Epoch 0000000003 - current precision is 0.0000; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.90it/s]
-Epoch 0000000004 - current precision is 0.0000; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.98it/s]
-Epoch 0000000005 - current precision is 0.0000; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.98it/s]
-Epoch 0000000006 - current precision is 0.0000; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.97it/s]
-Epoch 0000000007 - current precision is 0.0000; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.98it/s]
-Epoch 0000000008 - current precision is 0.2518; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.99it/s]
-Epoch 0000000009 - current precision is 0.4460; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.99it/s]
-Epoch 0000000010 - current precision is 0.5761; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.99it/s]
-Epoch 0000000011 - current precision is 0.6619; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.97it/s]
-Epoch 0000000012 - current precision is 0.7236; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.97it/s]
-Epoch 0000000013 - current precision is 0.7773; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.98it/s]
-Epoch 0000000014 - current precision is 0.8177; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.95it/s]
-Epoch 0000000015 - current precision is 0.8487; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.98it/s]
-Epoch 0000000016 - current precision is 0.8698; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.96it/s]
-Epoch 0000000017 - current precision is 0.8897; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.95it/s]
-Epoch 0000000018 - current precision is 0.9045; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.96it/s]
-Epoch 0000000019 - current precision is 0.9151; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.98it/s]
-Epoch 0000000020 - current precision is 0.9212; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.88it/s]
-Epoch 0000000021 - current precision is 0.9264; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.98it/s]
-Epoch 0000000022 - current precision is 0.9356; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.96it/s]
-Epoch 0000000023 - current precision is 0.9444; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.98it/s]
-Epoch 0000000024 - current precision is 0.9496; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.98it/s]
-Epoch 0000000025 - current precision is 0.9550; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.96it/s]
-Epoch 0000000026 - current precision is 0.9581; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.97it/s]
-Epoch 0000000027 - current precision is 0.9628; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.96it/s]
-Epoch 0000000028 - current precision is 0.9615; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.98it/s]
-Epoch 0000000029 - current precision is 0.9689; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.98it/s]
-Epoch 0000000030 - current precision is 0.9712; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.99it/s]
-Epoch 0000000031 - current precision is 0.9730; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.97it/s]
-Epoch 0000000032 - current precision is 0.9753; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.97it/s]
-Epoch 0000000033 - current precision is 0.9780; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.98it/s]
-Epoch 0000000034 - current precision is 0.9779; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.94it/s]
-Epoch 0000000035 - current precision is 0.9803; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.89it/s]
-Epoch 0000000036 - current precision is 0.9814; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.92it/s]
-Epoch 0000000037 - current precision is 0.9829; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.95it/s]
-Epoch 0000000038 - current precision is 0.9825; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.96it/s]
-Epoch 0000000039 - current precision is 0.9843; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.96it/s]
-Epoch 0000000040 - current precision is 0.9854; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.98it/s]
-Epoch 0000000041 - current precision is 0.9868; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.95it/s]
-Epoch 0000000042 - current precision is 0.9874; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.96it/s]
-Epoch 0000000043 - current precision is 0.9875; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.97it/s]
-Epoch 0000000044 - current precision is 0.9880; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.96it/s]
-Epoch 0000000045 - current precision is 0.9878; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.96it/s]
-Epoch 0000000046 - current precision is 0.9874; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.92it/s]
-Epoch 0000000047 - current precision is 0.9878; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.94it/s]
-Epoch 0000000048 - current precision is 0.9886; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.93it/s]
-Epoch 0000000049 - current precision is 0.9891; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.96it/s]
-Epoch 0000000050 - current precision is 0.9897; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.95it/s]
-Epoch 0000000051 - current precision is 0.9898; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.97it/s]
-Finalization... -- current precision is 0.9910; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:00<00:00, 274kit/s]
+Epoch 0000000001 - current precision is 0.0000; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.85it/s]
+Epoch 0000000002 - current precision is 0.0000; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.86it/s]
+Epoch 0000000003 - current precision is 0.0000; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.85it/s]
+Epoch 0000000004 - current precision is 0.0000; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.92it/s]
+Epoch 0000000005 - current precision is 0.0000; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.92it/s]
+Epoch 0000000006 - current precision is 0.0000; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.92it/s]
+Epoch 0000000007 - current precision is 0.0000; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.87it/s]
+Epoch 0000000008 - current precision is 0.2686; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.95it/s]
+Epoch 0000000009 - current precision is 0.4756; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.93it/s]
+Epoch 0000000010 - current precision is 0.6053; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.90it/s]
+Epoch 0000000011 - current precision is 0.6933; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.96it/s]
+Epoch 0000000012 - current precision is 0.7540; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.93it/s]
+Epoch 0000000013 - current precision is 0.8011; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.93it/s]
+Epoch 0000000014 - current precision is 0.8358; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.86it/s]
+Epoch 0000000015 - current precision is 0.8455; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.78it/s]
+Epoch 0000000016 - current precision is 0.8709; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.71it/s]
+Epoch 0000000017 - current precision is 0.8913; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.80it/s]
+Epoch 0000000018 - current precision is 0.9070; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.80it/s]
+Epoch 0000000019 - current precision is 0.9099; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.81it/s]
+Epoch 0000000020 - current precision is 0.9163; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.80it/s]
+Epoch 0000000021 - current precision is 0.9271; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.79it/s]
+Epoch 0000000022 - current precision is 0.9393; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.70it/s]
+Epoch 0000000023 - current precision is 0.9454; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.80it/s]
+Epoch 0000000024 - current precision is 0.9528; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.80it/s]
+Epoch 0000000025 - current precision is 0.9581; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.77it/s]
+Epoch 0000000026 - current precision is 0.9611; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.80it/s]
+Epoch 0000000027 - current precision is 0.9650; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.79it/s]
+Epoch 0000000028 - current precision is 0.9676; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.78it/s]
+Epoch 0000000029 - current precision is 0.9705; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.70it/s]
+Epoch 0000000030 - current precision is 0.9735; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.77it/s]
+Epoch 0000000031 - current precision is 0.9757; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.72it/s]
+Epoch 0000000032 - current precision is 0.9776; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.66it/s]
+Epoch 0000000033 - current precision is 0.9782; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.67it/s]
+Epoch 0000000034 - current precision is 0.9791; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.71it/s]
+Epoch 0000000035 - current precision is 0.9799; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.62it/s]
+Epoch 0000000036 - current precision is 0.9811; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.79it/s]
+Epoch 0000000037 - current precision is 0.9822; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.78it/s]
+Epoch 0000000038 - current precision is 0.9839; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.69it/s]
+Epoch 0000000039 - current precision is 0.9843; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.70it/s]
+Epoch 0000000040 - current precision is 0.9852; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.79it/s]
+Epoch 0000000041 - current precision is 0.9866; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.81it/s]
+Epoch 0000000042 - current precision is 0.9873; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.60it/s]
+Epoch 0000000043 - current precision is 0.9872; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.50it/s]
+Epoch 0000000044 - current precision is 0.9866; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.64it/s]
+Epoch 0000000045 - current precision is 0.9880; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.73it/s]
+Epoch 0000000046 - current precision is 0.9883; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.69it/s]
+Epoch 0000000047 - current precision is 0.9886; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.53it/s]
+Epoch 0000000048 - current precision is 0.9879; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.57it/s]
+Epoch 0000000049 - current precision is 0.9894; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.56it/s]
+Epoch 0000000050 - current precision is 0.9896; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:02<00:00, 2.62it/s]
+Finalization... -- current precision is 0.9904; aiming for precision >= 0.9900 in training: 100%|██████████| 6.00/6.00 [00:00<00:00, 350kit/s]
 
                                                                                                                                                                 
-Runtime: 109.4389271736145 seconds.
+Runtime: 114.53112292289734 seconds.
 ```
 ```python
 from time import time # import time module
@@ -4246,16 +4533,17 @@ print(f'\nRuntime: {time_spent_scn} seconds.') # displays the total time spent i
 
 ```
 Runned on a Macbook M3 Max with 48GB of VRAM.
-The **SCN** network was **202 times** faster in training than a conventional Transformer network using the same dataset.
+The **SCN** network was **209 times** faster in training than a conventional Transformer network using the same dataset.
 ```bash
-Reading data: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 8683.86it/s]
-Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 15948954.88it/s]
-Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 93.99it/s]
-Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 109.19it/s]
-Generating 500U parameters: 100%|██████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 28308.01it/s]
-Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 3965.12it/s]
+Reading data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 13934.56it/s]
+Embedding data: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 1000000/1000000 [00:00<00:00, 16260143.44it/s]
+Tokenizing data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 95.72it/s]
+Training model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 111.16it/s]
+Generating 500U parameters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 6936.56it/s]
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2134/2134 [00:00<00:00, 3851396.19it/s]
+Saving model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 2199.66it/s]
 
-Runtime: 0.542384147644043 seconds.
+Runtime: 0.5467090606689453 seconds.
 ```
 Check below the difference between the times spent on fine-tuning training with the two architectures.
 ```python
@@ -4280,7 +4568,7 @@ print(f'\nRuntime: {time_spent_transformer} seconds.') # displays the total time
 ```
 ```bash
                                                                                                                                                                 
-Runtime: 5.016919851303101 seconds.
+Runtime: 5.123013973236084 seconds.
 ```
 ```python
 from time import time # import time module
@@ -4304,9 +4592,18 @@ print(f'\nRuntime: {time_spent_scn} seconds.') # displays the total time spent i
 Runned on a Macbook M3 Max with 48GB of VRAM.
 The **SCN** network was **9 times** faster in training with fine-tuning than a conventional Transformer network using the same dataset.
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 4098.86it/s]
+Decoding file: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 10669/10669 [00:00<00:00, 24627974.34it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3454.95it/s]
+Encoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 167/167 [00:00<00:00, 606974.67it/s]
+Decoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 834/834 [00:00<00:00, 5949063.84it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 341/341 [00:00<00:00, 1696628.31it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 1704/1704 [00:00<00:00, 12259166.41it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 458/458 [00:00<00:00, 2110979.38it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2289/2289 [00:00<00:00, 13715374.08it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 2491162.38it/s]
 
-Runtime: 0.5410029888153076 seconds.
+Runtime: 0.5643172264099121 seconds.
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2134/2134 [00:00<00:00, 4218022.97it/s]
 ```
 Now see an inference test with the generated models.
 ```python
@@ -4332,7 +4629,7 @@ The three main types are:
 - **Unsupervised Learning**: The model identifies patterns without labels.
 - **Reinforcement Learning**: The model learns through trial and error, receiving rewards or penalties.
 
-Runtime: 4.654726028442383 seconds.
+Runtime: 4.401560068130493 seconds.
 ```
 ```python
 from time import time # import time module
@@ -4351,15 +4648,19 @@ print(f'\nRuntime: {time_spent_scn} seconds.') # displays the total time spent i
 
 ```
 Runned on a Macbook M3 Max with 48GB of VRAM.
-The **SCN** network was **9 times** faster in inferring than a conventional Transformer network using the same dataset.
+The **SCN** network was **8 times** faster in inferring than a conventional Transformer network using the same dataset.
 ```bash
-Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 3357.36it/s]
+Decoding file: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 10669/10669 [00:00<00:00, 23651706.86it/s]
+Decoding file: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2939/2939 [00:00<00:00, 14834006.57it/s]
+Loading model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 2607.01it/s]
 The three main types are:
 - **Supervised Learning**: The model learns from labeled data.
 - **Unsupervised Learning**: The model identifies patterns without labels.
 - **Reinforcement Learning**: The model learns through trial and error, receiving rewards or penalties.
 
-Runtime: 0.5305447578430176 seconds.
+Runtime: 0.5276989936828613 seconds.
+Encoding file: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2134/2134 [00:00<00:00, 3756040.59it/s]
+Encoding file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 588/588 [00:00<00:00, 2380550.92it/s]
 ```
 
 ## Contributing
