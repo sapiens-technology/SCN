@@ -4,7 +4,7 @@ SCN or SCNet is a family of architectures for language models that uses a HurNet
 
 The SCN is a proprietary neural network architecture based on [SCNet](https://github.com/sapiens-technology/SCNet). It was created by Ben-Hur Varriano to meet the demands of Sapiens Technology®️ and to function as a support model for traditional models. For some specific cases, it can also be implemented as the main model in question-and-answer tasks where the training dataset is not excessively large. In very large datasets, it can still be used, but at a performance cost. The [HurNet](https://github.com/sapiens-technology/HurNet) network is implemented in the code by the [HurNetTorch](https://github.com/sapiens-technology/HurNetTorch) package, which has optimization features for CPU, GPU, TPU, and MPS devices. Any public disclosure or comment on technical aspects related to this code is strictly prohibited and the author will be prosecuted by our legal team.
 
-<br>![Image](hurnet_fx.png)<br>
+<br>![Image](scn.png)<br>
 
 Click [here](https://github.com/sapiens-technology/SCN/blob/main/SCN-EN.pdf) to access the full study.
 
