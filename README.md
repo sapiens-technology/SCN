@@ -10,7 +10,7 @@ Click [here](https://github.com/sapiens-technology/SCN/blob/main/SCN-EN.pdf) to 
 
 <br>![Image](gpt_vs_scn.png)<br>
 
-<sup>You can check the tests in the graph above by clicking [here](https://colab.research.google.com/drive/1yFZ-sNVaSw84HNjT9Fqi_XWFGAMUwIzP?usp=sharing).</sup>
+<sup>You can check the tests in the graph above by clicking [here](https://colab.research.google.com/drive/1PPZZsREgkUowqiePFC7c6-_gnb_N0khO?usp=sharing).</sup>
 
 | Training Type SCN                | Speed gain compared to GPT model with Transformer |
 |------------------------------------|---------------------------------------------------|
