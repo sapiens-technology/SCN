@@ -12,10 +12,10 @@ Click [here](https://github.com/sapiens-technology/SCN/blob/main/SCN-EN.pdf) to 
 
 <sup>You can check the tests in the graph above by clicking [here](https://colab.research.google.com/drive/1PPZZsREgkUowqiePFC7c6-_gnb_N0khO?usp=sharing).</sup>
 
-| Training Type SCN                | Speed gain compared to GPT model with Transformer |
+| Training Type SCN                  | Speed gain compared to GPT model with Transformer |
 |------------------------------------|---------------------------------------------------|
-| Base model training                | 6674x                                             |
-| Fine-tuning training               | 2120x                                             |
+| Base model training                | 10702x                                            |
+| Fine-tuning training               | 243x                                              |
 
 ## Installation
 
