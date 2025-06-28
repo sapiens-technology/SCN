@@ -277,7 +277,7 @@ scn.print_predict(prompt)
 print()
 print('Prompt:', prompt)
 prompt = 'please could you tell me the name of the main language spoken in spain?'
-print('Answer:', end='')
+print('Answer: ', end='')
 scn.print_predict(prompt)
 
 ```
@@ -290,7 +290,7 @@ Prompt: i would like to know the meaning of the acronym gpt in language models
 Answer: GPT in language models stands for Generative Pre-trained Transformer.
 
 Prompt: i would like to know the meaning of the acronym gpt in language models
-Answer:The main language spoken in Spain is Spanish.
+Answer: The main language spoken in Spain is Spanish.
 ```
 You can combine different ways of inserting data when assembling your dataset. Below we are combining data coming from a file, with data from variables.
 ```python
