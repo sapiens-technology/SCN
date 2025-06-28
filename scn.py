@@ -244,9 +244,9 @@ class SCN():
                     else: file_stream.close()
                 return
             separator_sequence = end_tag.encode('utf-8')
-            sequence_length = len(separator_sequence)
+            sequence_length, buffer_size = len(separator_sequence), self.__getBufferSize()
             if remote_flag:
-                remote_stream, buffer_capacity, data_buffer = self.__urlopen(dataset_path), self.__getBufferSize(), bytearray()
+                remote_stream, buffer_capacity, data_buffer = self.__urlopen(dataset_path), buffer_size, bytearray()
                 while True:
                     chunk_bytes = remote_stream.read(buffer_capacity)
                     if not chunk_bytes: break
@@ -261,6 +261,12 @@ class SCN():
                 if data_buffer: yield str(data_buffer.decode('utf-8')).strip()
                 remote_stream.close()
                 return
+            if self.__getsize(dataset_path) < buffer_size:
+                blocks = []
+                with open(dataset_path, 'r', encoding='utf-8') as file: blocks = str(file.read()).strip().split(end_tag)
+                if len(blocks) > 0:
+                    for block in blocks: yield block
+                    return
             file_stream = open(dataset_path, 'rb')
             memory_map, start_position = self.__MemoryMap(file_stream.fileno(), 0, access=self.__ACCESS_READ), 0
             while True:
