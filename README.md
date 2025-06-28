@@ -17,6 +17,8 @@ Click [here](https://github.com/sapiens-technology/SCN/blob/main/SCN-EN.pdf) to 
 | Base model training                | 10702x                                            |
 | Fine-tuning training               | 243x                                              |
 
+> The Sapiens Technology®️ codes may undergo updates and different versions of the code, operating system or hardware used may influence execution times, either more or less, as well as the memory available on the machine and the random initialization of calculations may also influence this difference.
+
 ## Installation
 
 Use the package manager [pip](https://pypi.org/project/scn/) to install the Semantic Comparison Network.
